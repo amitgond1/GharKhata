@@ -1,0 +1,635 @@
+/* Phone layouts use readable controls and touch targets without changing printable reports. */
+.mobile-search {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px;
+    scroll-padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+  }
+  .topbar {
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(12px, env(safe-area-inset-right, 0px));
+    padding-top: env(safe-area-inset-top, 0px);
+    height: calc(64px + env(safe-area-inset-top, 0px));
+  }
+  .topbar-actions {
+    gap: 2px;
+  }
+  .toolbar-right {
+    flex-wrap: wrap;
+  }
+  .toolbar-right input {
+    font-size: 16px;
+    min-height: 48px;
+    flex: 1 1 170px;
+    width: auto;
+  }
+  .topbar-actions .icon-btn,
+  .icon-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .topbar-actions .top-avatar {
+    display: none;
+  }
+  .mobile-search {
+    display: inline-flex;
+  }
+  .main-content {
+    padding-bottom: calc(116px + env(safe-area-inset-bottom, 0px));
+  }
+  .bottom-nav {
+    height: calc(74px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .bottom-nav > a,
+  .bottom-nav > button {
+    min-height: 56px;
+    font-size: 11px;
+  }
+  .bottom-nav .mobile-add b {
+    font-size: 11px;
+  }
+  .btn,
+  .inner-heading > .btn,
+  .list-toolbar .btn,
+  .toolbar-right .btn,
+  .secondary-actions .btn {
+    min-height: 44px;
+    padding: 11px 14px;
+    font-size: 13px;
+    white-space: normal;
+    text-align: center;
+  }
+  input,
+  select,
+  textarea,
+  .field input,
+  .field select,
+  .field textarea,
+  .dashboard-filters input,
+  .dashboard-filters select,
+  .report-controls input,
+  .report-controls select,
+  .search-field input,
+  .list-toolbar > select,
+  .allocation-row input,
+  .allocation-row select,
+  .task-card-main select {
+    font-size: 16px;
+    min-height: 48px;
+  }
+  input[type='checkbox'] {
+    min-height: 22px;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+  input[type='date'],
+  input[type='month'],
+  select {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .field,
+  .dashboard-filters .field,
+  .report-controls .field {
+    font-size: 13px;
+    gap: 9px;
+  }
+  .optional,
+  .field > .optional {
+    font-size: 11px;
+  }
+  .field-error,
+  .fine-print {
+    font-size: 12px;
+  }
+  .text-btn,
+  .recent-panel .text-btn,
+  .task-add,
+  .progress-preview .text-btn,
+  .budget-row .text-btn,
+  .dashboard-filter-note .text-btn {
+    min-height: 44px;
+    align-items: center;
+    font-size: 12px;
+  }
+  .page-heading p,
+  .panel-heading p,
+  .form-intro {
+    font-size: 13px;
+  }
+  .eyebrow,
+  .page-heading .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.1px;
+  }
+  .page-heading {
+    align-items: flex-start;
+  }
+  .page-heading h1 {
+    font-size: 25px;
+  }
+  .dashboard-filter-toggle {
+    min-height: 44px;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+  .project-banner {
+    height: auto;
+    min-height: 172px;
+  }
+  .project-banner-copy {
+    max-width: 100%;
+    padding-right: 65px;
+  }
+  .project-banner h2 {
+    font-size: 23px;
+  }
+  .project-banner p,
+  .project-banner-footer {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .project-banner-footer {
+    max-width: 86%;
+  }
+  .project-banner .banner-house {
+    width: 150px;
+    right: -34px;
+    top: auto;
+    bottom: 10px;
+    opacity: 0.3;
+  }
+  .project-state {
+    font-size: 10px;
+  }
+  .banner-caption {
+    display: none;
+  }
+  .stat-card {
+    padding: 17px 13px;
+  }
+  .stat-label {
+    font-size: 11px;
+    line-height: 1.6;
+    white-space: normal;
+    align-items: flex-start;
+  }
+  .stat-value {
+    font-size: clamp(21px, 5.9vw, 27px);
+  }
+  .stat-note {
+    font-size: 10px;
+    white-space: normal;
+    line-height: 1.6;
+    height: auto;
+    min-height: 24px;
+    align-items: flex-start;
+  }
+  .stat-note .note-dot,
+  .stat-note .mini-progress {
+    margin-top: 6px;
+  }
+  .balance-strip,
+  .balance-strip strong {
+    font-size: 12px;
+  }
+  .balance-strip p {
+    font-size: 11px;
+  }
+  .category-panel {
+    display: block;
+  }
+  .category-panel .donut-wrap {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .category-legend {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 4px 20px 18px;
+    gap: 14px;
+  }
+  .category-legend > div,
+  .category-legend strong {
+    font-size: 12px;
+  }
+  .category-footer {
+    margin: 0;
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .chart-legend {
+    font-size: 11px;
+    flex-wrap: wrap;
+  }
+  .vendor-grid,
+  .cards-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .vendor-card h3,
+  .info-card h3 {
+    font-size: 18px;
+  }
+  .vendor-card > p,
+  .vendor-details,
+  .vendor-balances small,
+  .info-card > p,
+  .info-card .fine-print {
+    font-size: 12px;
+  }
+  .vendor-balances {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .vendor-balances > div {
+    display: block;
+  }
+  .vendor-balances strong {
+    font-size: 19px;
+    margin-top: 7px;
+  }
+  .worker-totals > div {
+    flex-direction: row;
+  }
+  .worker-totals small {
+    font-size: 12px;
+  }
+  .worker-totals .money {
+    font-size: 15px;
+  }
+  .tabs {
+    gap: 20px;
+  }
+  .tabs button {
+    min-height: 48px;
+    font-size: 13px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .mobile-record {
+    padding: 20px 18px;
+  }
+  .mobile-record strong {
+    font-size: 14px;
+  }
+  .mobile-record small {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .mobile-record .badge,
+  .badge.paid,
+  .badge.partial,
+  .badge.unpaid {
+    font-size: 11px;
+  }
+  .mobile-record > div:nth-child(2) {
+    gap: 12px;
+  }
+  .task-card-main h3,
+  .dashboard-task strong {
+    font-size: 14px;
+  }
+  .task-metadata,
+  .dashboard-task small {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .task-check,
+  .task-card-main > .task-check {
+    min-width: 44px;
+    min-height: 44px;
+    margin: 0;
+    border: 0;
+    position: relative;
+  }
+  .task-check::before {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    border: 1px solid var(--muted);
+    border-radius: 5px;
+  }
+  .task-check.checked {
+    background: none;
+    color: var(--teal);
+  }
+  .task-check.checked::before {
+    border-color: var(--teal);
+  }
+  .task-check svg {
+    z-index: 1;
+  }
+  .task-card-main > div {
+    min-width: 0;
+    flex-basis: calc(100% - 54px);
+  }
+  .task-card-main select {
+    margin-left: 54px;
+    max-width: calc(100% - 54px);
+  }
+  .task-checklist {
+    margin-left: 54px;
+  }
+  .checkbox,
+  .task-checklist .checkbox {
+    min-height: 44px;
+    font-size: 13px;
+  }
+  .timeline-card h2 {
+    font-size: 20px;
+  }
+  .timeline-card > p,
+  .timeline-card .no-photo {
+    font-size: 13px;
+  }
+  .timeline-date span,
+  .timeline-card .eyebrow,
+  .timeline-card .card-top > .small {
+    font-size: 11px;
+  }
+  .timeline-entry {
+    grid-template-columns: 35px 10px minmax(0, 1fr);
+  }
+  .timeline-card {
+    padding: 18px;
+  }
+  .progress-preview p,
+  .care-note p {
+    font-size: 13px;
+  }
+  .progress-preview {
+    flex-wrap: wrap;
+  }
+  .progress-upload {
+    min-width: 100px;
+    min-height: 100px;
+    font-size: 12px;
+  }
+  .modal,
+  .modal.wide {
+    width: calc(100% - 16px);
+    top: calc(var(--visual-viewport-top, 0px) + 8px);
+    bottom: auto;
+    margin: 0 auto;
+    max-height: calc(var(--visual-viewport-height, 100dvh) - 16px);
+    overscroll-behavior: contain;
+  }
+  .modal-head {
+    padding: 14px 18px;
+  }
+  .modal-head h2 {
+    font-size: 20px;
+  }
+  .modal .form-footer {
+    padding: 14px 18px max(14px, env(safe-area-inset-bottom, 0px));
+  }
+  .form-footer > .small {
+    display: none;
+  }
+  .form-footer .btn {
+    min-height: 48px;
+    font-size: 15px;
+    flex: 1;
+  }
+  .form-footer .btn:only-child {
+    width: 100%;
+  }
+  .calculation {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .calculation > div {
+    flex: 1;
+    font-size: 12px;
+    min-width: 70px;
+  }
+  .calculation .money {
+    font-size: 17px;
+  }
+  .upload-zone {
+    min-height: 84px;
+    font-size: 13px;
+  }
+  .upload-file-list a,
+  .attachment {
+    font-size: 12px;
+    min-height: 44px;
+  }
+  .expand-btn {
+    min-height: 48px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .expand-btn > span {
+    font-size: 11px;
+  }
+  .allocation-row {
+    grid-template-columns: minmax(0, 1fr) 44px;
+  }
+  .allocation-row select {
+    grid-column: 1 / -1;
+  }
+  .allocation-row input {
+    min-width: 0;
+  }
+  .mobile-sidebar {
+    width: min(320px, 92vw);
+    max-height: var(--visual-viewport-height, 100dvh);
+    padding-bottom: calc(25px + env(safe-area-inset-bottom, 0px));
+    overscroll-behavior: contain;
+  }
+  .mobile-sidebar .side-nav a,
+  .mobile-sidebar .settings-nav {
+    min-height: 48px;
+    font-size: 14px;
+  }
+  .mobile-sidebar .project-switcher select {
+    min-height: 44px;
+    font-size: 16px;
+  }
+  .mobile-sidebar .sidebar-brand {
+    padding-right: 35px;
+  }
+  .notification-panel {
+    top: calc(67px + env(safe-area-inset-top, 0px));
+    max-height: calc(var(--visual-viewport-height, 100dvh) - 100px);
+  }
+  .reminder strong {
+    font-size: 14px;
+  }
+  .reminder small {
+    font-size: 12px;
+  }
+  .reminder > a:last-child {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .toast {
+    bottom: calc(90px + env(safe-area-inset-bottom, 0px));
+    font-size: 13px;
+  }
+  .role-guide {
+    grid-template-columns: 1fr;
+  }
+  .role-guide strong,
+  .member-row strong {
+    font-size: 14px;
+  }
+  .role-guide p,
+  .member-row small,
+  .project-dl dt {
+    font-size: 12px;
+  }
+  .project-dl dd {
+    font-size: 14px;
+  }
+  .settings-export p {
+    font-size: 12px;
+  }
+  .report-controls {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .report-controls > .field,
+  .report-buttons {
+    grid-column: 1;
+  }
+  .report-buttons {
+    flex-wrap: wrap;
+  }
+  .report-buttons .btn {
+    flex: 1 1 150px;
+  }
+  .report-totals strong {
+    font-size: 19px;
+  }
+  .report-totals span:not(.money) {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .stacked-table,
+  .stacked-table tbody,
+  .stacked-table tfoot {
+    display: block;
+    width: 100%;
+  }
+  .stacked-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .stacked-table tbody tr,
+  .stacked-table tfoot tr {
+    display: block;
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .stacked-table td,
+  .report-paper .stacked-table td {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 8px 0;
+    border: 0;
+    font-size: 13px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .stacked-table td::before {
+    content: attr(data-label);
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 500;
+    flex: 0 0 42%;
+    line-height: 1.7;
+  }
+  .stacked-table td:first-child {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .stacked-table td:first-child::before {
+    display: none;
+  }
+  .stacked-table td .money,
+  .report-paper .stacked-table td .money {
+    font-size: 14px;
+  }
+  .stacked-table td > small {
+    font-size: 11px;
+  }
+  .stacked-table td > :not(.money):not(.badge):not(.text-btn) {
+    min-width: 0;
+  }
+  .stacked-table td > strong {
+    font-size: 15px;
+  }
+  .stacked-table td:has(.block) {
+    flex-wrap: wrap;
+  }
+  .stacked-table td > .block {
+    flex-basis: 100%;
+  }
+  .stacked-table td > .badge {
+    margin-left: auto;
+  }
+  .stacked-table tfoot tr {
+    background: var(--surface-alt);
+  }
+  .landing-nav > div > .text-btn,
+  .landing-nav .btn,
+  .hero-actions .btn {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .hero-copy > p,
+  .steps-grid p,
+  .privacy-band p,
+  .faq details p {
+    font-size: 14px;
+  }
+  .hero-assurance {
+    font-size: 11px;
+  }
+  .auth-card input,
+  .auth-card select {
+    font-size: 16px;
+  }
+  .auth-card .field {
+    font-size: 13px;
+  }
+  .auth-card .btn {
+    font-size: 15px;
+    min-height: 48px;
+  }
+  .forgot-link,
+  .auth-switch {
+    min-height: 44px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal .form-grid,
+  .modal .expanded {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .project-dl {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .inner-heading > .btn {
+    width: 100%;
+  }
+  .report-paper {
+    padding: 22px 16px;
+  }
+}

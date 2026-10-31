@@ -1,0 +1,31 @@
+{
+  "name": "gharkhata",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "start": "npm run start -w server",
+    "build": "npm run build -w server && npm run build -w client",
+    "test": "npm run test -w server",
+    "test:e2e": "playwright test",
+    "db:start": "node scripts/mongo.mjs",
+    "check:atlas": "node scripts/check-atlas.mjs",
+    "check:deployment": "node scripts/check-deployment.mjs",
+    "seed": "npm run seed -w server"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "concurrently": "^9.2.1",
+    "mongodb": "^7.0.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}
